@@ -4,7 +4,7 @@ import javax.servlet.annotation.WebListener;
 import javax.servlet.http.HttpSessionAttributeListener;
 import javax.servlet.http.HttpSessionBindingEvent;
 
-@WebListener(name = "BookAddedListener")
+
 public class BookAddedListener implements HttpSessionAttributeListener {
 
 
@@ -13,7 +13,7 @@ public class BookAddedListener implements HttpSessionAttributeListener {
 
         String name = httpSessionBindingEvent.getName();
         Object value = httpSessionBindingEvent.getValue();
-        System.out.println("Attribute added: " + name + ":" +value);
+        System.out.println("Attribute added: " + name + ": " +value);
     }
 
     @Override
@@ -21,7 +21,7 @@ public class BookAddedListener implements HttpSessionAttributeListener {
 
         String name = httpSessionBindingEvent.getName();
         Object value = httpSessionBindingEvent.getValue();
-        System.out.println("Attribute added: " + name + ":" +value);
+        System.out.println("Attribute removed: " + name + ": " +value);
     }
 
     @Override
@@ -29,6 +29,6 @@ public class BookAddedListener implements HttpSessionAttributeListener {
 
         String name = httpSessionBindingEvent.getName();
         Object value = httpSessionBindingEvent.getValue();
-        System.out.println("Attribute added: " + name + ":" +value);
+        System.out.println("Attribute replaced: " + name + ": " +value);
     }
 }
