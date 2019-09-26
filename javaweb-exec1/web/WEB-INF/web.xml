@@ -12,4 +12,33 @@
         <servlet-name>CodeReturnServlet</servlet-name>
         <url-pattern>/CodeReturnServlet</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SelectBeerServlet</servlet-name>
+        <servlet-class>servlet.SelectBeerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SelectBeerServlet</servlet-name>
+        <url-pattern>/SelectBeer.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ShowBrownBeerServlet</servlet-name>
+        <servlet-class>servlet.ShowBrownBeerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ShowBrownBeerServlet</servlet-name>
+        <url-pattern>/ShowBrownBeer.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ShowDarkBeerServlet</servlet-name>
+        <servlet-class>servlet.ShowDarkBeerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ShowDarkBeerServlet</servlet-name>
+        <url-pattern>/ShowDarkBeer.do</url-pattern>
+    </servlet-mapping>
+
+
 </web-app>

@@ -20,6 +20,8 @@ public class CodeReturnServlet extends HttpServlet{
 
         response.setContentType("application/jar");
         ServletContext context = getServletContext();
+
+        // TODO Relative Path
         InputStream inputStream = context.getResourceAsStream("/WEB-INF/classes/bookCode.jar");
 
         int read = 0;
@@ -39,3 +41,4 @@ public class CodeReturnServlet extends HttpServlet{
     }
 
 }
+
