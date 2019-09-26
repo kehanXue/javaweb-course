@@ -25,6 +25,9 @@ public class ShoppingCart extends HttpServlet {
         // 取得Session对象
         // 如果Session不存在，为本次会话创建此对象
         HttpSession session = req.getSession(true);
+
+        // session.setMaxInactiveInterval(20 * 60);
+
         Integer itemCount = (Integer) session.getAttribute("itemCount");
         // 如果session是新的
         if (itemCount == null)
