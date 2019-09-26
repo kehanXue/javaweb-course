@@ -4,6 +4,11 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
 
+    <context-param>
+        <param-name>contextParam</param-name>
+        <param-value>kehan_context</param-value>
+    </context-param>
+
     <servlet>
         <servlet-name>CodeReturnServlet</servlet-name>
         <servlet-class>servlet.CodeReturnServlet</servlet-class>
@@ -40,5 +45,17 @@
         <url-pattern>/ShowDarkBeer.do</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>TestInitParamsServlet</servlet-name>
+        <servlet-class>servlet.TestInitParamsServlet</servlet-class>
+        <init-param>
+            <param-name>servletParam</param-name>
+            <param-value>kehan_servlet</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TestInitParamsServlet</servlet-name>
+        <url-pattern>/TestInitParamsServlet.do</url-pattern>
+    </servlet-mapping>
 
 </web-app>
