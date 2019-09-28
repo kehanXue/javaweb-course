@@ -17,6 +17,31 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class Login extends HttpServlet {
 
+    public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+
+        String name = "";
+        Cookie[] cookies = req.getCookies();
+        for (int i = 0; i < cookies.length; i++) {
+            if (cookies[i].getName().equals("name")) {
+                name = cookies[i].getValue();
+            }
+        }
+
+        PrintWriter out = res.getWriter();
+        res.setContentType("text/html");
+
+        out.println("<html>");
+        out.println("<title>");
+        out.println("User list");
+        out.println("</title>");
+        out.println("<body><h5>Use Cookies</h5><hr><br><br>");
+        out.println("<body><h4>User List:</h4><hr><br><br>");
+        out.println(name);
+        out.println("</body>");
+        out.println("</html>");
+        out.close();
+    }
+
     /*
      * (non-Javadoc)
      *
@@ -29,7 +54,7 @@ public class Login extends HttpServlet {
         String password = req.getParameter("password");
         boolean judge = true;
         System.out.println(name);
-        Cookie cookies[] = req.getCookies();
+        Cookie[] cookies = req.getCookies();
 
         if (cookies != null) {
             for (int i = 0; i < cookies.length; i++) {

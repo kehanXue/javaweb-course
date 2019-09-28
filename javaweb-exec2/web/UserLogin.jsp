@@ -39,3 +39,24 @@
 <p>&nbsp;</p>
 </body>
 </html>
+
+<%
+    int cookies_cnt = 0;
+    Cookie[] cookies = request.getCookies();
+    if (cookies != null) {
+        for (int i = 0; i < cookies.length; i++) {
+            if (cookies[i].getName().equals("name")) {
+                cookies_cnt += 1;
+            }
+            if (cookies[i].getName().equals("password")) {
+                cookies_cnt += 1;
+            }
+        }
+
+        System.out.println(cookies_cnt);
+        if (cookies_cnt == 2) {
+            response.sendRedirect("Login.do");
+        }
+    }
+%>
+
