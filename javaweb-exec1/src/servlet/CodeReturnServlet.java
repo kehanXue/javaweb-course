@@ -16,6 +16,18 @@ import java.io.OutputStream;
 @WebServlet(name = "CodeReturnServlet")
 public class CodeReturnServlet extends HttpServlet{
 
+    /**
+     * The doGet method implements the request and response between browser and
+     * server
+     *
+     * @param request
+     *            the browser request
+     * @param response
+     *            the server response
+     *
+     * @throws IOException
+     *             if there are errors from the input
+     */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         response.setContentType("application/jar");
@@ -35,6 +47,18 @@ public class CodeReturnServlet extends HttpServlet{
         outputStream.close();
     }
 
+    /**
+     * The doGet method implements the request and response between browser and
+     * server
+     *
+     * @param request
+     *            the browser request
+     * @param response
+     *            the server response
+     *
+     * @throws IOException
+     *             if there are errors from the input
+     */
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         doGet(request, response);

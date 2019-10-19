@@ -17,6 +17,18 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class Login extends HttpServlet {
 
+    /**
+     * The doGet method implements the request and response between browser and
+     * server
+     *
+     * @param req
+     *            the browser request
+     * @param res
+     *            the server response
+     *
+     * @throws IOException
+     *             if there are errors from the input
+     */
     public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 
         String name = "";
@@ -42,11 +54,17 @@ public class Login extends HttpServlet {
         out.close();
     }
 
-    /*
-     * (non-Javadoc)
+    /**
+     * The doPost method implements the request and response between browser and
+     * server
      *
-     * @see javax.servlet.http.HttpServlet#doPost(javax.servlet.http.
-     * HttpServletRequest, javax.servlet.http.HttpServletResponse)
+     * @param req
+     *            the browser request
+     * @param res
+     *            the server response
+     *
+     * @throws IOException
+     *             if there are errors from the input
      */
     public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 

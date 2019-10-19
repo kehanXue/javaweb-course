@@ -11,6 +11,18 @@ import java.io.PrintWriter;
 @WebServlet(name = "ShowDarkBeerServlet")
 public class ShowDarkBeerServlet extends HttpServlet {
 
+    /**
+     * The doPost method implements the request and response between browser and
+     * server
+     *
+     * @param request
+     *            the browser request
+     * @param response
+     *            the server response
+     *
+     * @throws IOException
+     *             if there are errors from the input
+     */
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         String colorParam = request.getParameter("color");
@@ -21,6 +33,18 @@ public class ShowDarkBeerServlet extends HttpServlet {
                 + "(Dispatcher)My selected beer color is: " + colorParam + "</body>" + "</html>");
     }
 
+    /**
+     * The doGet method implements the request and response between browser and
+     * server
+     *
+     * @param request
+     *            the browser request
+     * @param response
+     *            the server response
+     *
+     * @throws IOException
+     *             if there are errors from the input
+     */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         doPost(request, response);

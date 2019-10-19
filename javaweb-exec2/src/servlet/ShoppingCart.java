@@ -11,14 +11,20 @@ import javax.servlet.http.HttpSession;
 
 /**
  * 购物车处理
- *
+ * 将用户选择书目存入Session,并打印全部选择记录。
  * @author liyong
  * @version 1.0
  */
+
 public class ShoppingCart extends HttpServlet {
 
     /**
-     * 将用户选择书目存入Session,并打印全部选择记录。
+     * The doPost method implements the request and response between browser and
+     * server
+     *
+     * @param req the browser request
+     * @param res the server response
+     * @throws IOException if there are errors from the input
      */
     public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 

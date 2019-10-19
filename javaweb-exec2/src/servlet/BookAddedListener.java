@@ -7,7 +7,12 @@ import javax.servlet.http.HttpSessionBindingEvent;
 
 public class BookAddedListener implements HttpSessionAttributeListener {
 
-
+    /**
+     * The attributeAdded method implements the httpSessionBindingEvent to listen attribute added
+     * event
+     *
+     * @param httpSessionBindingEvent the http session binding event
+     */
     @Override
     public void attributeAdded(HttpSessionBindingEvent httpSessionBindingEvent) {
 
@@ -16,6 +21,12 @@ public class BookAddedListener implements HttpSessionAttributeListener {
         System.out.println("Attribute added: " + name + ": " +value);
     }
 
+    /**
+     * The attributeRemoved method implements the httpSessionBindingEvent to listen attribute removed
+     * event
+     *
+     * @param httpSessionBindingEvent the http session binding event
+     */
     @Override
     public void attributeRemoved(HttpSessionBindingEvent httpSessionBindingEvent) {
 
@@ -24,6 +35,12 @@ public class BookAddedListener implements HttpSessionAttributeListener {
         System.out.println("Attribute removed: " + name + ": " +value);
     }
 
+    /**
+     * The attributeAdded method implements the httpSessionBindingEvent to listen attribute replaced
+     * event
+     *
+     * @param httpSessionBindingEvent the http session binding event
+     */
     @Override
     public void attributeReplaced(HttpSessionBindingEvent httpSessionBindingEvent) {
 

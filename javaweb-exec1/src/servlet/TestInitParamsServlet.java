@@ -12,6 +12,18 @@ import java.io.PrintWriter;
 @WebServlet(name = "TestInitParamsServlet")
 public class TestInitParamsServlet extends HttpServlet {
 
+    /**
+     * The doGet method implements the request and response between browser and
+     * server
+     *
+     * @param request
+     *            the browser request
+     * @param response
+     *            the server response
+     *
+     * @throws IOException
+     *             if there are errors from the input
+     */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         response.setContentType("text/html");
@@ -25,6 +37,18 @@ public class TestInitParamsServlet extends HttpServlet {
         out.println("<br>context param is: " + getServletContext().getInitParameter("contextParam") + "<br>");
     }
 
+    /**
+     * The doPost method implements the request and response between browser and
+     * server
+     *
+     * @param request
+     *            the browser request
+     * @param response
+     *            the server response
+     *
+     * @throws IOException
+     *             if there are errors from the input
+     */
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         doGet(request, response);
