@@ -2,33 +2,64 @@ package servlet;
 
 import javax.servlet.jsp.*;
 import javax.servlet.jsp.tagext.*;
+import java.io.IOException;
 
 /**
  * 计数标签
- * 
- * @author liyong
  *
+ * @author liyong
  */
-public class CounterTag extends TagSupport {
+// public class CounterTag extends TagSupport {
+//
+// 	private static int counter = 1;
+//
+// 	public int doStartTag() throws JspException {
+// 		try {
+// 			JspWriter out = pageContext.getOut();
+// 			out.print(counter);
+// 			setCounter();
+// 		} catch (java.io.IOException e) {
+// 			throw new JspTagException(e.getMessage());
+// 		}
+// 		return SKIP_BODY;
+// 	}
+//
+// 	public int getCounter() {
+// 		return counter;
+// 	}
+//
+// 	public void setCounter() {
+// 		counter++;
+// 	}
+// }
 
-	private static int counter = 1;
+/**
+ * 计数标签
+ *
+ * @author kehanXue
+ */
+public class CounterTag extends SimpleTagSupport {
 
-	public int doStartTag() throws JspException {
-		try {
-			JspWriter out = pageContext.getOut();
-			out.print(counter);
-			setCounter();
-		} catch (java.io.IOException e) {
-			throw new JspTagException(e.getMessage());
-		}
-		return SKIP_BODY;
-	}
+    private static int counter = 1;
 
-	public int getCounter() {
-		return counter;
-	}
+    /**
+     * doTag()
+     *
+     * @throws JspException
+     * @throws IOException
+     */
+    @Override
+    public void doTag() throws JspException, IOException {
+        super.doTag();
+        getJspContext().getOut().print(counter);
+        setCounter();
+    }
 
-	public void setCounter() {
-		counter++;
-	}
+    public int getCounter() {
+        return counter;
+    }
+
+    public void setCounter() {
+        counter++;
+    }
 }

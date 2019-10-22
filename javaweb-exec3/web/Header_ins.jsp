@@ -7,7 +7,7 @@
 <title>Label</title>
 </head>
 <body>
-<img src="WEB-INF/java.png"><br>
+<img src="java.png"><br>
 <em><strong>Welcome to the Web World!</strong></em><br>
 </body>
 </html>

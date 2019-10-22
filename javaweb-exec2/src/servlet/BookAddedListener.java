@@ -36,7 +36,7 @@ public class BookAddedListener implements HttpSessionAttributeListener {
     }
 
     /**
-     * The attributeAdded method implements the httpSessionBindingEvent to listen attribute replaced
+     * The attributeReplaced method implements the httpSessionBindingEvent to listen attribute replaced
      * event
      *
      * @param httpSessionBindingEvent the http session binding event

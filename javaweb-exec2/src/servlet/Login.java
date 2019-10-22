@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
  * 登录处理
  *
  * @author liyong
+ * @author kehan
  * @version 1.0
  */
 public class Login extends HttpServlet {

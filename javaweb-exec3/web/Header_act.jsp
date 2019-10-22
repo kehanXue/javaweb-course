@@ -7,7 +7,7 @@
 <title>Action</title>
 </head>
 <body>
-	<img src="WEB-INF/java.png">
+	<img src="java.png">
 	<br>
 	<em><strong>${param.subTitle}</strong></em>
 	<br>
